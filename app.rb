@@ -4,6 +4,6 @@ get '/' do
   erb :found
 end
 
-post '/iniciarJuego' do
+post '/inicia' do
   erb :juego
 end
