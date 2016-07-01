@@ -46,4 +46,16 @@ class Tablero
     end
     htmlTable += "</table>"
   end
+
+  def validar x1,y1,x2,y2
+    if @matriz[x1][y1] == @matriz[x2][y2]
+      a=@matriz[x1][y1]
+      a[1]=1
+      @matriz[x1][y1]=a
+      @matriz[x2][y2]=a
+      return "TRUE"
+    else
+      return "FALSE"
+    end
+  end
 end
