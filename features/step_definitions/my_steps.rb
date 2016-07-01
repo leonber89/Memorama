@@ -19,3 +19,7 @@ end
 When(/^inicio el juego$/) do
   click_button("default")
 end
+
+When(/^todos los pares encontrados "(.*?)"$/) do |gane|
+   last_response.body.should =~ /#{gane}/m
+end

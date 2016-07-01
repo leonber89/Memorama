@@ -1,6 +1,5 @@
 require 'sinatra'
 require './lib/tablero'
-
 enable :sessions
 
 get '/' do

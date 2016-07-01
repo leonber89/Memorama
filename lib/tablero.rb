@@ -1,9 +1,11 @@
 class Tablero
-  def initialize x, y, tipo, intentos
+  def initialize x, y, tipo =2, intentos= 5
     @rows = x
     @columns = y
     @intentos=intentos
-    @matriz = Array.new(x){Array.new(y,[0,0])}
+    @x = x
+    @y = y
+@matriz = Array.new(x){Array.new(y,[0,0])}
     n = 1;
     counter = 1
     for i in 0..(x-1)
@@ -60,17 +62,28 @@ class Tablero
   end
 
   def validar x1,y1,x2,y2
-    #if @itentos > 0
-      if @matriz[x1][y1] == @matriz[x2][y2]
-        a=@matriz[x1][y1]
-        a[1]=1
-        @matriz[x1][y1]=a
-        @matriz[x2][y2]=a
-        return "TRUE"
-      else
-        @intentos -= 1
-        return "FALSE"
-      end
+    if @matriz[x1][y1] == @matriz[x2][y2]
+      a=@matriz[x1][y1]
+      a[1]=1
+      @matriz[x1][y1]=a
+      @matriz[x2][y2]=a
+      return "TRUE"
+    else
+      @intentos -= 1
+      return "FALSE"
     end
-  #end
+  end
+
+    def ganar
+      for i in 0..(@x-1)
+        for a in 0..(@y-1)
+          a=@matriz[i][a]
+          if a[1]==0
+            return "FALSE"
+          end
+        end
+      end
+       return "GANE"
+    end
+
 end
