@@ -9,6 +9,7 @@
     <%= "Memomara de pares. Tablero #{session["tablero"].rows}x#{session["tablero"].columns}" %>
     <br>
     <h2>Intentos: <%= session["tablero"].intentos %></h2>
+    <h2><span style="color:red;"> <%= session["tablero"].mensaje %></span></h2>
     <br>
 
     <%= session["tablero"].mostrarTabla %>
