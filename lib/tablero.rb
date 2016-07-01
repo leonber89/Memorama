@@ -83,7 +83,7 @@ class Tablero
           end
         end
       end
-       return "GANASTE!"
+       return "GANE"
     end
 
 end
