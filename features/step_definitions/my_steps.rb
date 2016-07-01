@@ -16,5 +16,5 @@ Given(/^configurado el tablero de "(.*?)"$/) do |tamano|
 end
 
 When(/^inicio el juego$/) do
-  click_button("iniciar")
+  click_button("default")
 end
