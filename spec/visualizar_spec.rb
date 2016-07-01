@@ -1,12 +1,10 @@
-require './lib/visualizar'
+require './lib/tablero'
 
-describe Visualizar do
+describe Tablero do
   it "Visualizar tablero de 6x6" do
-    tablero = [[[0,0],[0,0]],
-              [[0,0],[0,0]]]
-    visualizar = Visualizar.new
-    resultado = visualizar.visualiza 6,6
-    resultado.should == tablero
+    tablero = "[[[1, 0], [1, 0]], [[2, 0], [2, 0]]]"
+    visualizar = Tablero.new 2,2,0
+    visualizar.ver.should == tablero
   end
 
 end
