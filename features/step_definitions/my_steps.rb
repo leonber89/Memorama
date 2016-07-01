@@ -10,9 +10,10 @@ When(/^selecciono "(.*?)"$/) do |name|
   click_button(name)
 end
 
-Given(/^configurado el tablero de "(.*?)"$/) do |tamano|
+Given(/^configurado el tablero de "(.*?)" x "(.*?)"$/) do |rows, columns|
   visit '/'
-  fill_in("tamano", :with => tamano)
+  fill_in("rows", :with => rows)
+  fill_in("columns", :with => columns)
 end
 
 When(/^inicio el juego$/) do

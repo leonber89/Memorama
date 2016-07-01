@@ -6,6 +6,11 @@
   </head>
   <body>
     <h1>Tablero</h1>
-	Memomara de pares. Tablero 6x6
+    <%= "Memomara de pares. Tablero #{session["rows"]}x#{session["columns"]}" %>
+    <br>
+    <br>
+    <table>
+    <%= session["tablero"].mostrarTabla %>
+   </table>
   </body>
 </html>
