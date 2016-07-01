@@ -6,11 +6,23 @@
   </head>
   <body>
     <h1>Tablero</h1>
-    <%= "Memomara de pares. Tablero #{session["rows"]}x#{session["columns"]}" %>
+    <%= "Memomara de pares. Tablero #{session["tablero"].rows}x#{session["tablero"].columns}" %>
     <br>
+    <h2>Intentos: <%= session["tablero"].intentos %></h2>
     <br>
-    <table>
+
     <%= session["tablero"].mostrarTabla %>
-   </table>
+    <br>
+    <form action="/adivinar" method="post">
+      <h3>Carta 1: </h3>
+      <label for="x1">x: </label><input type="text" name="x1" value="0"><br>
+      <label for="y1">y: </label><input type="text" name="y1" value="0">
+      <br>
+      <h3>Carta 2: </h3>
+      <label for="x2">x: </label><input type="text" name="x2" value="0"><br>
+      <label for="y2">y: </label><input type="text" name="y2" value="1"><br>
+      <input type="submit" value="adivinar">
+    </form>
+
   </body>
 </html>
