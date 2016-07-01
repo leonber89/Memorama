@@ -9,7 +9,3 @@ end
 When(/^selecciono "(.*?)"$/) do |name|
   click_button(name)
 end
-
-Then(/^crea tablero$/) do
-  
-end
