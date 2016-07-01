@@ -1,7 +1,11 @@
 class Tablero
-  def initialize x, y, tipo
+  def initialize x, y, tipo =2, intentos= 5
     @matriz = Array.new(x){Array.new(y,[0,0])}
-    n = 1;
+    @intentos = intentos
+    @x = x
+    @y = y
+
+    n = 1
     counter = 1
     for i in 0..(x-1)
       for a in 0..(y-1)
@@ -30,4 +34,17 @@ class Tablero
       return "FALSE"
     end
   end
+
+    def ganar
+      for i in 0..(@x-1)
+        for a in 0..(@y-1)
+          a=@matriz[i][a]
+          if a[1]==0
+            return "FALSE"
+          end
+        end
+      end
+       return "GANE"
+    end
+
 end
