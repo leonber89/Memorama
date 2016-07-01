@@ -79,11 +79,11 @@ class Tablero
         for a in 0..(@y-1)
           a=@matriz[i][a]
           if a[1]==0
-            return "FALSE"
+            return "Sigue intentando"
           end
         end
       end
-       return "GANE"
+       return "GANASTE!"
     end
 
 end
